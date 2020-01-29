@@ -1,37 +1,39 @@
-# ParrotMC - IN DEVELOPMENT
-![](https://img.shields.io/badge/Minecraft-1.12.2-brightgreen.svg?colorB=469C00)
-![](https://img.shields.io/badge/Forge-14.23.5.2847-brightgreen.svg?colorB=469C00)
-![](https://img.shields.io/badge/Spigot-1.12.2%20latest-brightgreen.svg?colorB=469C00)
-![](https://img.shields.io/badge/CatSever-20.01.11-brightgreen)
+# CatServer
+![Minecraft Version](https://camo.githubusercontent.com/c0e3577c768e5e75babe16439b3103451e74da0d/68747470733a2f2f696d672e736869656c64732e696f2f62616467652f4d696e6563726166742d312e31322e322d627269676874677265656e2e7376673f636f6c6f72423d343639433030)
+![Forge Version](https://camo.githubusercontent.com/b6425e7a30e2455617fb01349e2bc40c41d024ca/68747470733a2f2f696d672e736869656c64732e696f2f62616467652f466f7267652d31342e32332e352e323834372d627269676874677265656e2e7376673f636f6c6f72423d343639433030)
+![Spigot Version](https://camo.githubusercontent.com/150a941bd9e0f7cf2e88dc4c7e0e83b1c7f40b34/68747470733a2f2f696d672e736869656c64732e696f2f62616467652f537069676f742d312e31322e322532306c61746573742d627269676874677265656e2e7376673f636f6c6f72423d343639433030)
 
-ParrotMC is a fork of [CatServer](https://github.com/Luohuayu/CatServer) using Graal technology.
+CatServer is a Minecraft server software supporting plugins and mods.
 
 # Features
-## Spigot, Forge and Sponge APIs support
-Like CatServer, ParrotMC supports Forge mods, Spigot and Sponge plugins stably.
-- Put Forge mods in the `mods` directory
-- Put Spigot plugins in the `plugins` directory
-- Put Sponge plugins in the `mods/plugins` directory
+## Multiples APIs support
+CatServer supports these APIs:
+- Spigot (plugins)
+- Forge (mods)
+- Sponge throught SpongeForge (plugins)
 
-# Next Fatures
-**WARNING: These features will be present in the first ParrotMC release. They aren't included in CatServer releases**
-## Feather-Lightweight
-ParrotMC use Graal's `native-image` tool to produce lightweight native images for Linux, Windows and Mac OS.
+## Multithreaded
+CatServer has a multithreaded version named `async` using multiples threads unlike Forge/Spigot/Vanilla servers. It allow your server to do resources-intensives tasks without blocking it entirely.
 
-Generated images consume less memory and start faster. Graal is also able to compile Just In Time plugins and mods faster than the Java HotSpot VM
-![Graal vs HotSpot](https://pbs.twimg.com/media/DgOjz4hVQAAWwil.png)
-*Graal vs Java HotSpot performances*
+Note this version is less-stable than the `universal` one.
 
-## Polyglots mods and plugins
-ParrotMC allow you to load and execute polyglots mods and plugins using GraalVM. You can add your own language by editing/forking [Graal's Truffle Framework](https://github.com/oracle/graal/tree/master/truffle).
+# Install
+This software requires Java 8 or later. Note Java is retrocompatible.
 
-The default Truffle implementation supports:
-- JVM languages (Java, Kotlin, Scala, Groovy...)
-- JavaScript & NodeJS
-- Ruby
-- R
-- Python
-- grCUDA
-- C++
-- C
-- Rust
+[Download](https://github.com/Luohuayu/CatServer/releases) and place the server jar in an empty directory. Now launch it using the `java` command:
+```sh
+java -jar yourJar.jar
+```
+See also:
+- [Configuring JVM arguments](https://docs.oracle.com/cd/E22289_01/html/821-1274/configuring-the-default-jvm-and-java-arguments.html)
+- [Spigot configuration](https://www.spigotmc.org/wiki/spigot-configuration/)
+- [Vanilla server's properties](https://www.spigotmc.org/wiki/spigot-configuration-server-properties/)
+
+# Contribute
+You can contribute to this project by:
+- Opening issues when you find a bug/missing feature
+- Forking it and send pull requests
+
+# More informations
+- Telegram: https://t.me/CatServer
+- Website: http://catserver.moe
